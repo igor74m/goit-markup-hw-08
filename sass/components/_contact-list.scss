@@ -1,0 +1,46 @@
+.contact {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    color: var(--color);
+    font-family: 'Roboto', sans-serif;
+    @include font($fw: 500, $ls: 0.02em);
+    transition: color var(--transition-dur-and-funk);
+
+& .contact__item:not(:last-child) {
+    margin-right: 50px;
+        }
+}
+
+.contact__link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--color);
+    font-family: 'Roboto', sans-serif;
+    @include font($fw: 500,$ls: 0.02em);
+    transition: color var(--transition-dur-and-funk);
+
+
+&:hover,
+&:focus {
+    color: var(--accent-color);
+    }
+}
+
+.contact__icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.contact__icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+}
