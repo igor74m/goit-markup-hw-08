@@ -1,5 +1,18 @@
 .page-logo {
     color: var(--accent-color);
     font-family: 'Raleway', sans-serif;
+}
+.studio-heder {
+    color: #000000;
+}
+@media screen and (max-width: 1199px) {
+.page-logo {
+        @include font($fs: 24px, $lh: 28px, );
+    }
+    
+}
+@media screen and (min-width: 1200px) {
+.page-logo {
     @include font($fs: 26px, $lh: 31px,);
+}
 }

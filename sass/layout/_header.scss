@@ -1,88 +1,118 @@
-.menu {
-    display: none;
-}
-.contact {
-    display: none;
+@media screen and (max-width: 767px){
+    .menu {
+            display: none;
+        }
+    
+    .contact {
+            display: none;
+        }
+    .open-mobile-menu-btn {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            line-height: 0;
+            width: 40px;
+                height: 40px;
+        
+                }
+        
+    .open-mobile-menu-btn__icon {
+        width: 24px;
+        height: 16px;
+           
+                }
+    .page-header {
+        padding-top: 16px;
+        padding-bottom: 16px;
+                                
 }
 .page-header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.page-header {
-    padding-top: 16px;
-    padding-bottom: 16px;
 }
 
-.studio-heder {
-        color: #000000;
-     }
-.open-mobile-menu-btn {
-    border:none;
-    background-color: transparent;
-    padding: 0;
-    line-height: 0;
-   
+.page-header__container {
+    display: flex;
+    align-items: center;
+
 }
-.open-mobile-menu-btn__icon {
-width: 40px;
-    height: 40px;
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .page-header {
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+        }
+    .menu {
+        display: flex;
+    }
+    .contact {
+        display: flex;
+    }
+    .open-mobile-menu-btn {
+        display: none;
+    }
+       
+    
+        .container-header {
+            display: flex;
+            align-items: center;
+        }
+    
+        .page-nav {
+            display: flex;
+            align-items: center;
+        }
+    
+    
+        .menu {
+            display: flex;
+             margin-left: 87px;
+        }
+    
+        .menu .menu__item+.menu__item {
+            margin-left: 50px;
+        }
+                .menu__link {
+                    display: inline-block;
+                    padding-top: 32px;
+                    padding-bottom: 32px;
+                    position: relative;
+        
+                    color: var(--title-text-color);
+                    @include font($fw: 500, $ls: 0.02em);
+                    transition: color var(--transition-dur-and-funk);
+        
+                    &:hover,
+                    &:focus {
+                        color: var(--accent-color);
+                    }
+                }
+        
+                .menu__link_current {
+                    color: var(--accent-color);
+        
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 4px;
+                        border-radius: 2px;
+                        background-color: var(--accent-color);
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
 }
-// .page-header {
-//     background-color: var(--background-color);
-//     border: 1px solid var(--border-color);
+// @media screen and (min-width: 1200px) {
+
 // }
 
-// .container-header {
-//     display: flex;
-//     align-items: center;
-// }
 
-// .page-nav {
-//     display: flex;
-//     align-items: center;
-// }
 
-// .studio-heder {
-//     color: #000000;
-// }
-
-// .menu {
-//     display: flex;
-//     margin-left: 93px;
-// }
-
-// .menu .menu__item+.menu__item {
-//     margin-left: 50px;
-// }
-
-// .menu__link {
-//     display: inline-block;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//     position: relative;
-
-//     color: var(--title-text-color);
-//     @include font($fw: 500, $lh: 16px, $ls: 00.02em);
-//     transition: color var(--transition-dur-and-funk);
-
-// &:hover,
-// &:focus {
-//     color: var(--accent-color);
-//         }
-// }
-
-// .menu__link_current {
-//     color: var(--accent-color);
-// &::after {
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: var(--accent-color);
-//     bottom: 0;
-//     left: 0;
-//         }
-// }
 
