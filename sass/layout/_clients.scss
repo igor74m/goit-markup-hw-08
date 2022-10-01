@@ -1,37 +1,85 @@
-.container-clients {
-    padding-top: 94px;
-    padding-bottom: 120px;
-}
-
-.clients-list {
-    display: flex;
-    gap: 30px;
-}
-
-.clients-item {
-    width: 170px;
-    height: 92px;
-}
-
-.clients-link {
-    @extend %align;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    transition: border-color var(--transition-dur-and-funk);
-
-&:hover {
-    border: 1px solid var(--accent-color);
+@media screen and (min-width: 320px) {
+    
+        .clients-list {
+            display: flex;
+            flex-wrap: wrap;
         }
-&:hover .clients-icon,
-&:focus .clients-icon {
-    fill: var(--accent-color);
+    
+        .clients-item {
+            height: 92px;
+                    width: calc((100% - 30px) / 2);
+                    margin-right: 30px;
+                    margin-bottom: 30px;
+            
+                    &:nth-child(2n) {
+                        margin-right: 0;
+                    }
+            
+                    &:nth-last-child(-n + 2) {
+                        margin-bottom: 0;
+                    }
+                
+        }
+    
+        .clients-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #afb1b8;
+            border-radius: 4px;
+            // transition: border-color var(--transition-dur-and-funk);
+    
+            &:hover {
+                border: 1px solid var(--accent-color);
+            }
+    
+            &:hover .clients-icon,
+            &:focus .clients-icon {
+                fill: var(--accent-color);
+            }
+        }
+    
+        .clients-icon {
+            fill: var(--social-links-color);
+            transition: fill var(--transition-dur-and-funk);
         }
 }
 
-.clients-icon {
-    fill: var(--social-links-color);
-    transition: fill var(--transition-dur-and-funk);
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+        .clients-list {
+                display: flex;
+                flex-wrap: wrap;
+        
+        
+          & .clients-item {
+                width: calc((100% - 60px) / 3);
+                margin-right: 30px;
+                margin-bottom: 30px;
+          }
+          & .clients-item:nth-child(3n) {
+                    margin-right: 0;
+                }
+        
+         & .clients-item:nth-last-child(-n + 3) {
+                    margin-bottom: 0;
+                }
+        
+            }
 }
 
+@media screen and (min-width: 1200px) {
+    
+        .clients-list {
+            display: flex;
+        }
+    
+        .clients-item {
+            width: 170px;
+            height: 92px;
+        }
+                  .clients-item:not(:last-child) {
+                      margin-right: 30px;
+                  }
+}

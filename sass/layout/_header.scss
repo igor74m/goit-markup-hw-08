@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .menu {
             display: none;
         }
@@ -12,7 +12,6 @@
             padding: 0;
             line-height: 0;
             width: 40px;
-                height: 40px;
         
                 }
         
@@ -39,10 +38,6 @@
 
 }
 
-
-
-
-
 @media screen and (min-width: 768px) {
     .page-header {
             background-color: var(--background-color);
@@ -58,7 +53,6 @@
         display: none;
     }
        
-    
         .container-header {
             display: flex;
             align-items: center;
@@ -109,9 +103,7 @@
                     }
                 }
 }
-// @media screen and (min-width: 1200px) {
 
-// }
 
 
 

@@ -1,54 +1,86 @@
-// @media screen  and (max-width: 767px){
-// .hero {
-//         max-width: 480px;
-//         height: 400px;
-//         margin: 0 auto;
-//         padding: 18px 0;
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+.hero {
+        max-width: 767px;
+        height: 400px;
+        margin: 0 auto;
+        padding: 118px 0;
 
-//         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
-//             url(../images/hero.imj/hero-mobile.jpg);
-//         background-color: #c4c4c4;
-//         background-repeat: no-repeat;
-//         background-position: center;
-//         background-size: cover;
-//         text-align: center;
-//     }
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
+            url(../images/hero.imj/hero-mob.jpg);
+        background-color: #c4c4c4;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+    }
+          @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+              .hero {
+                  background-image: url(../images/hero.imj/hero-mob2x.jpg);
+              }
+          }
 
-//     .hero__title {
-//         width: 350px;
-//         margin-bottom: 30px;
-//         margin-left: auto;
-//         margin-right: auto;
+    .hero__title {
+       max-width: 360px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
 
-//         color: var(--background-color);
-//         @include font($fs: 44px, $fw: 900, $lh: 60px, $ls: 0.06em);
-//         text-transform: uppercase;
-//     }
+        color: var(--background-color);
+        
+        @include font($fs: 26px, $fw: 900, $lh: 1.6, $ls: 0.06em);
+        text-transform: uppercase;
+    }
     
-// }
+}
+@media screen and (min-width: 768px) {
+    .hero {
+    max-width: 1199px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
+                url(../images/hero.imj/hero-tab.jpg);
+        }
+                  @media (min-device-pixel-ratio: 2),
+                  (min-resolution: 192dpi),
+                  (min-resolution: 2dppx) {
+                      .hero {
+                          background-image: url(../images/hero.imj/hero-tab2x.jpg);
+                      }
+                  }
+    
+}
 
-// .hero {
-//     max-width: 1600px;
-//     height: 600px;
-//     margin: 0 auto;
-//     padding: 200px 0;
+@media screen and (min-width: 1200px) {
+    .hero {
+            max-width: 1600px;
+            height: 600px;
+            margin: 0 auto;
+            padding: 200px 0;
+    
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
+                url(../images/hero.imj/hero-desk.jpg);
+            background-color: #c4c4c4;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+        }
 
-//     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(47, 48, 58, 0.4)),
-//         url(../images/hero.imj/imj14.jpg);
-//     background-color: #c4c4c4;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     text-align: center;
-// }
+        @media (min-device-pixel-ratio: 2) , (min-resolution: 192dpi) , (min-resolution: 2dppx) {
+            .hero {
+                background-image: url(../images/hero.imj/hero-desk2x.jpg) ;
+            }
+        }
+    
+        .hero__title {
+            width: 696px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+    
+            color: var(--background-color);
+            @include font($fs: 44px, $fw: 900, $lh: 60px, $ls: 0.06em);
+            text-transform: uppercase;
+        }
+}
 
-// .hero__title {
-//     width: 696px;
-//     margin-bottom: 30px;
-//     margin-left: auto;
-//     margin-right: auto;
-
-//     color: var(--background-color);
-//     @include font($fs: 44px, $fw: 900, $lh: 60px, $ls: 0.06em);
-//     text-transform: uppercase;
-// }

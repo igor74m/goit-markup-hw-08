@@ -1,71 +1,111 @@
-.section-team {
-    background-color: var(--secondary-background-color);
-}
-
-.team-list {
-    display: flex;
-}
-
-.team-item {
-    background-color: var(--background-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-     0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-
-&:not(:last-child) {
-    margin-right: 30px;
+@media screen and (min-width: 320px) {
+    .section-team {
+            background-color: var(--secondary-background-color);
         }
     
-& .team-title {
-    padding-top: 30px;
-    margin-bottom: 10px;
-    
-    color: var(--title-text-color);
-    @include font($fs: 16px, $fw: 500, $lh: 19px,);
-    text-align: center;
+        .team-list {
+            display: block;
         }
     
-& .team-text {
-    margin-bottom: 16px;
-    @include font($fs: 16px, $fw: 400, $lh: 19px);
-    text-align: center;
-        }
-}
-
-
-
-.social-list {
-    @extend %align;
-    gap: 10px;
-    padding-bottom: 30px;
-}
-
-.social-item {
-    width: 44px;
-    height: 44px;
-}
-
-.social-link {
-    @extend %align;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background-color);
-    border-radius: 50%;
-    transition: background-color var(--transition-dur-and-funk),
-     fill var(--transition-dur-and-funk);
-
-&:hover,
-&:focus {
-    background-color: var(--accent-color);
+        .team-item {
+            margin-bottom: 30px;
+            background-color: var(--background-color);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
         }
     
-&:hover .social-icon,
-&:focus .social-icon {
-    fill: var(--background-color);
+            .team-title {
+                padding-top: 30px;
+                margin-bottom: 10px;
+    
+                color: var(--title-text-color);
+                @include font($fs: 16px, $fw: 500, $lh: 1.19);
+                text-align: center;
+            }
+    
+             .team-text {
+                margin-bottom: 16px;
+                @include font($fs: 16px, $fw: 400, $lh: 1.19);
+                text-align: center;
+            }
+    
+        .social-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 30px;
+        }
+    
+        .social-item {
+            width: 44px;
+            height: 44px;
+        }
+    
+        .social-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-color);
+            border-radius: 50%;
+            transition: background-color var(--transition-dur-and-funk),
+                fill var(--transition-dur-and-funk);
+    
+            &:hover,
+            &:focus {
+                background-color: var(--accent-color);
+            }
+    
+            &:hover .social-icon,
+            &:focus .social-icon {
+                fill: var(--background-color);
+            }
+        }
+    
+        .social-icon {
+            fill: var(--social-links-color);
         }
 }
+@media screen and (min-width: 768px) {
+    
+        .team-list {
+            display: flex;
+            flex-wrap: wrap;
+                }
+    
+        .team-item {
+            width: calc((100% - 30px) / 2);
+                margin-right: 30px;
+                margin-bottom: 30px;
+                      
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            
+                &:nth-last-child(-n + 2) {
+                    margin-bottom: 0;
+                }
+            }
+            .team-imj {
+                width: 100%;
+            }
+    }
+@media screen and (min-width: 1200px) {
 
-.social-icon {
-    fill: var(--social-links-color);
+    .team-list {
+        display: flex;
+    }
+
+    .team-item {
+        width: calc((100% - 90px) / 4);
+            margin-bottom: 0;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
 }
